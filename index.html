@@ -320,6 +320,75 @@
             padding: var(--space-lg);
         }
         
+        /* Seção do Time */
+        .team-section {
+            background-color: var(--light);
+            padding: var(--space-xl) 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        
+        .team-member {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-normal);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto var(--space-md);
+            border: 5px solid var(--accent);
+        }
+        
+        .member-name {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-bottom: var(--space-xs);
+        }
+        
+        .member-role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+        }
+        
+        .member-bio {
+            font-size: 0.95rem;
+            color: var(--gray);
+            margin-bottom: var(--space-md);
+        }
+        
+        .member-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+        }
+        
+        .member-link {
+            color: var(--secondary);
+            transition: var(--transition-fast);
+        }
+        
+        .member-link:hover {
+            color: var(--accent);
+        }
+        
         /* Rodapé */
         .footer {
             background-color: var(--dark);
@@ -373,7 +442,7 @@
                 padding-top: calc(var(--space-xl) * 2);
             }
             
-            .card-grid {
+            .card-grid, .team-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -429,7 +498,8 @@
                          class="card-image">
                     <div class="card-content">
                         <h3>Vidas Perfeitas</h3>
-                        <p>As redes sociais promovem uma narrativa sedutora de vidas perfeitas, repletas de sucesso constante e felicidade que impactam diretamente a autoestima.</p>
+                        <p>As redes sociais promovem uma narrativa sedutora de vidas perfeitas, repletas de sucesso constante e felicidade que impactam diretamente a autoestima. O Instagram, em particular, tornou-se uma vitrine de realizações onde apenas os melhores momentos são exibidos, criando uma distorção da realidade que pode levar a comparações prejudiciais e sentimentos de inadequação.</p>
+                        <p>Estudos mostram que 60% dos usuários de redes sociais relatam sentir que suas vidas não são tão interessantes quanto as dos outros. Essa percepção é alimentada por algoritmos que priorizam conteúdo "perfeito", criando um ciclo vicioso de produção e consumo de imagens irreais.</p>
                     </div>
                 </article>
                 
@@ -440,7 +510,8 @@
                          class="card-image">
                     <div class="card-content">
                         <h3>Ciclos de Ansiedade</h3>
-                        <p>Ao buscar se adequar a esses modelos irreais, muitas pessoas acabam presas em ciclos de ansiedade, frustração e consumo compulsivo.</p>
+                        <p>Ao buscar se adequar a esses modelos irreais, muitas pessoas acabam presas em ciclos de ansiedade, frustração e consumo compulsivo. A pressão por likes e validação digital pode levar a comportamentos obsessivos e até mesmo a distúrbios de saúde mental.</p>
+                        <p>A "economia da atenção" criada pelas plataformas digitais transforma nosso tempo e emoções em commodities. Cada notificação, cada scroll, cada like é cuidadosamente projetado para manter-nos engajados, muitas vezes às custas de nosso bem-estar emocional.</p>
                     </div>
                 </article>
                 
@@ -451,7 +522,8 @@
                          class="card-image">
                     <div class="card-content">
                         <h3>Realidade vs. Ilusão</h3>
-                        <p>A distorção entre realidade e representação digital cria um ambiente fértil para comparações sociais prejudiciais.</p>
+                        <p>A distorção entre realidade e representação digital cria um ambiente fértil para comparações sociais prejudiciais. O que vemos nas redes sociais é frequentemente o produto de horas de preparação, edição e curadoria - um processo que raramente é transparente para o espectador.</p>
+                        <p>O fenômeno do "FOMO" (Fear of Missing Out) se intensifica nesse contexto, fazendo com que os usuários sintam que estão constantemente perdendo experiências que outros estão tendo. Essa percepção distorcida pode levar a um ciclo de uso excessivo das redes sociais na tentativa de acompanhar uma realidade que, em grande parte, não existe.</p>
                     </div>
                 </article>
             </div>
@@ -466,7 +538,7 @@
             <div class="expandable-section animate" style="animation-delay: 0.2s;">
                 <div class="expandable-content">
                     <h3>Por trás da estética atrativa e do entretenimento</h3>
-                    <p>Há um sistema complexo que sustenta desigualdades e mecanismos de controle</p>
+                    <p>Há um sistema complexo que sustenta desigualdades e mecanismos de controle. As plataformas digitais não são neutras - elas são projetadas com interesses comerciais específicos que frequentemente entram em conflito com o bem-estar dos usuários.</p>
                     
                     <button class="expand-button" id="expandButton">
                         <span>Revelar Mecanismos</span>
@@ -478,15 +550,18 @@
                             <ul style="text-align: left; list-style: none;">
                                 <li style="margin-bottom: var(--space-md);">
                                     <h4 style="color: var(--accent); margin-bottom: var(--space-xs);">Dados pessoais como mercadoria</h4>
-                                    <p>Informações íntimas dos usuários são coletadas, analisadas e comercializadas sem transparência.</p>
+                                    <p>Informações íntimas dos usuários são coletadas, analisadas e comercializadas sem transparência. Cada like, cada tempo de visualização, cada interação é meticulosamente rastreada e transformada em perfis comportamentais que são vendidos para anunciantes.</p>
+                                    <p>Essa economia de vigilância cria assimetrias de poder onde corporações sabem mais sobre nossos desejos e medos do que nós mesmos, permitindo manipulações sutis de nosso comportamento através de micro-targeting.</p>
                                 </li>
                                 <li style="margin-bottom: var(--space-md);">
                                     <h4 style="color: var(--accent); margin-bottom: var(--space-xs);">Exploração do trabalho digital</h4>
-                                    <p>Criadores de conteúdo produzem valor sem garantias trabalhistas ou direitos básicos.</p>
+                                    <p>Criadores de conteúdo produzem valor sem garantias trabalhistas ou direitos básicos. Plataformas como Instagram extraem valor do trabalho criativo de milhões de usuários enquanto retêm a maior parte dos lucros e oferecem pouca proteção ou suporte.</p>
+                                    <p>A precarização do trabalho criativo é particularmente problemática para micro-influenciadores e criadores de nicho, que muitas vezes trabalham horas extras para produzir conteúdo sem remuneração adequada, na esperança de "serem descobertos".</p>
                                 </li>
                                 <li>
                                     <h4 style="color: var(--accent); margin-bottom: var(--space-xs);">Controle algorítmico</h4>
-                                    <p>O que aparece para cada usuário é decidido por sistemas opacos que privilegiam certas vozes e invisibilizam outras.</p>
+                                    <p>O que aparece para cada usuário é decidido por sistemas opacos que privilegiam certas vozes e invisibilizam outras. Esses algoritmos não são neutros - eles refletem e amplificam vieses sociais existentes, criando bolhas de filtro que reforçam preconceitos e limitam a exposição a perspectivas diversas.</p>
+                                    <p>O resultado é uma fragmentação da realidade compartilhada, onde diferentes grupos veem versões radicalmente diferentes dos mesmos eventos, dificultando o diálogo e o entendimento mútuo.</p>
                                 </li>
                             </ul>
                         </div>
@@ -504,7 +579,7 @@
             <div style="max-width: 800px; margin: 0 auto;">
                 <div class="animate" style="animation-delay: 0.2s;">
                     <p style="font-size: 1.25rem; margin-bottom: var(--space-xl); text-align: center;">
-                        É possível imaginar e construir um espaço digital diferente. Um novo modelo de Internet pode ser desenvolvido com base em valores mais éticos e inclusivos.
+                        É possível imaginar e construir um espaço digital diferente. Um novo modelo de Internet pode ser desenvolvido com base em valores mais éticos e inclusivos, que priorizem o bem-estar humano sobre o lucro corporativo e que reconheça a internet como um bem comum, não como um conjunto de jardins murados controlados por algumas grandes empresas.
                     </p>
                 </div>
                 
@@ -515,7 +590,8 @@
                              class="card-image">
                         <div class="card-content">
                             <h3>Descentralização</h3>
-                            <p>Redes distribuídas que não dependem de grandes corporações para existir.</p>
+                            <p>Redes distribuídas que não dependem de grandes corporações para existir. Plataformas federadas como o Mastodon mostram que é possível criar redes sociais onde os usuários controlam seus próprios dados e experiências.</p>
+                            <p>A descentralização permite maior resiliência contra censura e manipulação, além de distribuir o poder de moderação de forma mais democrática entre as comunidades.</p>
                         </div>
                     </article>
                     
@@ -525,7 +601,8 @@
                              class="card-image">
                         <div class="card-content">
                             <h3>Economia Colaborativa</h3>
-                            <p>Modelos que valorizam o trabalho criativo sem intermediários exploradores.</p>
+                            <p>Modelos que valorizam o trabalho criativo sem intermediários exploradores. Sistemas como cooperativas de plataforma ou modelos de assinatura direta permitem que criadores sejam remunerados de forma justa por seu trabalho.</p>
+                            <p>Blockchain e tecnologias de contrato inteligente podem permitir novos modelos de propriedade coletiva e governança democrática de plataformas digitais, onde os usuários são também os donos.</p>
                         </div>
                     </article>
                     
@@ -535,15 +612,80 @@
                              class="card-image">
                         <div class="card-content">
                             <h3>Transparência</h3>
-                            <p>Algoritmos abertos e auditáveis que não manipulam usuários.</p>
+                            <p>Algoritmos abertos e auditáveis que não manipulam usuários. Quando entendemos como os sistemas de recomendação funcionam, podemos tomar decisões mais informadas sobre nosso engajamento com as plataformas.</p>
+                            <p>A transparência algorítmica permite que pesquisadores independentes e sociedade civil monitorem vieses e efeitos colaterais prejudiciais, criando mecanismos de prestação de contas para as plataformas digitais.</p>
                         </div>
                     </article>
                 </div>
                 
                 <div class="animate" style="animation-delay: 0.6s; text-align: center; margin-top: var(--space-xl);">
                     <p style="font-size: 1.5rem; font-weight: 600; color: var(--primary);">
-                        Uma outra globalização digital não só é possível , como necessária.
+                        Uma outra globalização digital não só é possível, como necessária. Cabe a nós, como usuários, criadores e cidadãos digitais, exigir e construir alternativas que coloquem as pessoas no centro da experiência digital.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Seção 4: Nosso Time -->
+    <section class="section team-section" id="nosso-time">
+        <div class="container">
+            <h2 class="section-title animate">Nosso Time</h2>
+            <p class="animate" style="text-align: center; animation-delay: 0.2s; max-width: 800px; margin: 0 auto var(--space-xl);">
+                Conheça o grupo de estudantes dedicados que está explorando os desafios e possibilidades da globalização digital. Juntos, estamos comprometidos em entender e transformar o cenário digital para torná-lo mais justo e inclusivo.
+            </p>
+            
+            <div class="team-grid">
+                <div class="team-member animate" style="animation-delay: 0.3s;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                         alt="Marcos Gustavo" 
+                         class="member-photo">
+                    <h3 class="member-name">Marcos Gustavo</h3>
+                    <p class="member-role">Pesquisador de Algoritmos</p>
+                    <p class="member-bio">Especializado em análise de sistemas de recomendação e seus impactos sociais. Marcos investiga como os algoritmos das redes sociais moldam nossas percepções e comportamentos, muitas vezes de maneiras que não percebemos.</p>
+                    <div class="member-links">
+                        <a href="#" class="member-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="member-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member animate" style="animation-delay: 0.4s;">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" 
+                         alt="Jamilly Sterphane" 
+                         class="member-photo">
+                    <h3 class="member-name">Jamilly Sterphane</h3>
+                    <p class="member-role">Especialista em Saúde Digital</p>
+                    <p class="member-bio">Foca nos impactos psicológicos das redes sociais e no desenvolvimento de hábitos digitais saudáveis. Jamilly pesquisa como o design das plataformas explora vulnerabilidades humanas e como podemos criar resistência a essas manipulações.</p>
+                    <div class="member-links">
+                        <a href="#" class="member-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="member-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member animate" style="animation-delay: 0.5s;">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1361&q=80" 
+                         alt="Jullyane Sandra" 
+                         class="member-photo">
+                    <h3 class="member-name">Jullyane Sandra</h3>
+                    <p class="member-role">Designer Ético</p>
+                    <p class="member-bio">Especialista em design centrado no ser humano e em interfaces que promovem bem-estar digital. Jullyane desenvolve protótipos de plataformas que priorizam a autonomia do usuário e a transparência, em vez de engajamento a qualquer custo.</p>
+                    <div class="member-links">
+                        <a href="#" class="member-link"><i class="fab fa-behance"></i></a>
+                        <a href="#" class="member-link"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+                
+                <div class="team-member animate" style="animation-delay: 0.6s;">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80" 
+                         alt="Heloísa Pereira" 
+                         class="member-photo">
+                    <h3 class="member-name">Heloísa Pereira</h3>
+                    <p class="member-role">Ativista Digital</p>
+                    <p class="member-bio">Líder em movimentos por direitos digitais e regulamentação de plataformas. Heloísa organiza campanhas para conscientizar sobre os perigos da economia de vigilância e defende políticas que protejam os usuários de práticas exploratórias.</p>
+                    <div class="member-links">
+                        <a href="#" class="member-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="member-link"><i class="fas fa-globe"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -554,7 +696,7 @@
         <div class="container">
             <div class="footer-content animate" style="animation-delay: 0.2s;">
                 <h3 style="color: var(--white); margin-bottom: var(--space-md);">Junte-se à conversa</h3>
-                <p>Como estudantes e futuros profissionais da Internet, temos a responsabilidade e a oportunidade de propor alternativas tecnológicas.</p>
+                <p>Como estudantes e futuros profissionais da Internet, temos a responsabilidade e a oportunidade de propor alternativas tecnológicas. Nosso grupo está comprometido em desenvolver soluções para os desafios da globalização digital.</p>
                 
                 <div class="footer-links">
                     <a href="#" class="footer-link"><i class="fab fa-twitter"></i></a>
