@@ -15,14 +15,14 @@
     
     <style>
         :root {
-            /* Cores */
-            --primary: #000000;
-            --secondary: #14213D;
-            --accent: #FCA311;
-            --light: #E5E5E5;
-            --dark: #000000;
-            --gray: #8D8D8D;
-            --white: #FFFFFF;
+            /* NOVA PALETA DE CORES: VERMELHO, PRETO E BRANCO */
+            --primary: #B22222; /* Vermelho firebrick */
+            --secondary: #000000; /* Preto */
+            --accent: #FF0000; /* Vermelho vibrante */
+            --light: #F5F5F5; /* Branco suave */
+            --dark: #000000; /* Preto */
+            --gray: #666666; /* Cinza médio */
+            --white: #FFFFFF; /* Branco */
             
             /* Espaçamentos */
             --space-xs: 0.5rem;
@@ -166,6 +166,7 @@
             font-size: clamp(3rem, 10vw, 6rem);
             line-height: 0.9;
             margin-bottom: var(--space-md);
+            color: var(--primary);
         }
         
         .hero-subtitle {
@@ -290,7 +291,7 @@
         
         .expand-button {
             background-color: var(--accent);
-            color: var(--dark);
+            color: var(--white);
             border: none;
             padding: var(--space-sm) var(--space-lg);
             border-radius: var(--radius-md);
@@ -304,14 +305,14 @@
         
         .expand-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(252, 163, 17, 0.3);
+            box-shadow: 0 4px 12px rgba(255, 0, 0, 0.3);
         }
         
         .expanded-content {
             max-height: 0;
             overflow: hidden;
             transition: max-height var(--transition-slow);
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: var(--radius-md);
             margin-top: var(--space-lg);
         }
@@ -430,7 +431,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+            background-image: radial-gradient(rgba(178, 34, 34, 0.05) 1px, transparent 1px);
             background-size: 20px 20px;
             pointer-events: none;
             z-index: -1;
@@ -499,7 +500,7 @@
                     <div class="card-content">
                         <h3>Vidas Perfeitas</h3>
                         <p>As redes sociais promovem uma narrativa sedutora de vidas perfeitas, repletas de sucesso constante e felicidade que impactam diretamente a autoestima. O Instagram, em particular, tornou-se uma vitrine de realizações onde apenas os melhores momentos são exibidos, criando uma distorção da realidade que pode levar a comparações prejudiciais e sentimentos de inadequação.</p>
-                        <p>Estudos mostram que 60% dos usuários de redes sociais relatam sentir que suas vidas não são tão interessantes quanto as dos outros. Essa percepção é alimentada por algoritmos que priorizam conteúdo "perfeito", criando um ciclo vicioso de produção e consumo de imagens irreais.</p>
+                        <p>Estudos mostram que 60% dos usuários de redes sociais relatam sentir que suas vidas não são tão interessantes quanto as dos outros. Essa percepção é alimentada por algoritmos que priorizam conteúdo "perfeito", créando um ciclo vicioso de produção e consumo de imagens irreais.</p>
                     </div>
                 </article>
                 
@@ -551,7 +552,7 @@
                                 <li style="margin-bottom: var(--space-md);">
                                     <h4 style="color: var(--accent); margin-bottom: var(--space-xs);">Dados pessoais como mercadoria</h4>
                                     <p>Informações íntimas dos usuários são coletadas, analisadas e comercializadas sem transparência. Cada like, cada tempo de visualização, cada interação é meticulosamente rastreada e transformada em perfis comportamentais que são vendidos para anunciantes.</p>
-                                    <p>Essa economia de vigilância cria assimetrias de poder onde corporações sabem mais sobre nossos desejos e medos do que nós mesmos, permitindo manipulações sutis de nosso comportamento através de micro-targeting.</p>
+                                    <p>Essa economia de vigilância cria assimetrias de poder onde corporações saben mais sobre nossos desejos e medos do que nós mesmos, permitindo manipulações sutis de nosso comportamento através de micro-targeting.</p>
                                 </li>
                                 <li style="margin-bottom: var(--space-md);">
                                     <h4 style="color: var(--accent); margin-bottom: var(--space-xs);">Exploração do trabalho digital</h4>
